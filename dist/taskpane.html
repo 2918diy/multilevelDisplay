@@ -1,0 +1,7 @@
+<!doctype html><html lang="en" data-framework="typescript"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Contoso Task Pane Add-in</title><script>// Office js deletes window.history.pushState and window.history.replaceState. Cache them and restore them
+        window._historyCache = {
+            replaceState: window.history.replaceState,
+            pushState: window.history.pushState
+        };</script><script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script><script>// Office js deletes window.history.pushState and window.history.replaceState. Restore them
+        window.history.replaceState = window._historyCache.replaceState;
+        window.history.pushState = window._historyCache.pushState;</script><link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css"/><link href="taskpane.css" rel="stylesheet"/></head><body class="ms-font-m ms-Fabric"><div id="container"></div><script src="vendor.js"></script><script src="taskpane.js"></script></body></html>
